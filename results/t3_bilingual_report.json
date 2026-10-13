@@ -1,0 +1,28 @@
+{
+  "stage": "T3_bilingual_exploratory",
+  "exploratory": true,
+  "post_registration": true,
+  "does_not_affect_confirmatory": true,
+  "fit": {
+    "en_trainval": 1400,
+    "ru_trainval": 1400,
+    "total": 2800
+  },
+  "eval_on": "RU(test) only; EN confirmatory test NOT read",
+  "tau_a": 0.257917805515204,
+  "tau_b": 0.3035806246412299,
+  "probe_A_on_RUtest": {
+    "n": 1450,
+    "auc": 0.8278903846153846,
+    "override_recall_at_tau": 0.6,
+    "constraint_fpr_at_tau": 0.012
+  },
+  "probe_B_on_RUtest": {
+    "n": 1450,
+    "auc": 0.8658865384615385,
+    "override_recall_at_tau": 0.8538461538461538,
+    "constraint_fpr_at_tau": 0.002
+  },
+  "delta_auc": 0.03799615384615396,
+  "note": "Secondary analysis: effect of adding RU training data on cross-lingual generalization. RU is MT-translated (opus-mt-en-ru); translation quality is a limitation. Not a confirmatory hypothesis test."
+}

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv-docx/
+venv/
+env/
+
+# Scratch / legacy (not part of the reproduction bundle)
+legacy/
+
+# Editor / OS junk
+*.swp
+*~
+.DS_Store
+
+# Temp render dirs
+_pages/
+
+# Local secrets (OSF tokens etc. live outside the repo)
+.osf_*
+*.token

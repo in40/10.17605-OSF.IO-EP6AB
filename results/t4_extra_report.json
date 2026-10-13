@@ -1,0 +1,44 @@
+{
+  "stage": "T4_extra",
+  "tfidf_baseline": {
+    "pooled_auc": 0.9288211538461538,
+    "per_cell": {
+      "C1": {
+        "n": 400,
+        "mean": 0.3625986988995734,
+        "recall_at_tau": 0.8
+      },
+      "C2": {
+        "n": 150,
+        "mean": 0.3036282528226377,
+        "fpr_at_tau": 0.7466666666666667
+      },
+      "C3": {
+        "n": 250,
+        "mean": 0.3866630159210515,
+        "recall_at_tau": 0.956
+      },
+      "C4": {
+        "n": 150,
+        "mean": 0.14717260223444095,
+        "fpr_at_tau": 0.05333333333333334
+      },
+      "CONSTRAINT": {
+        "n": 500,
+        "mean": 0.02558486736921873,
+        "fpr_at_tau": 0.0
+      }
+    },
+    "note": "If TF-IDF CONSTRAINT FPR is also low, H3 over-defense resistance is a DATA property, not delta-specific."
+  },
+  "bilingual_negative_transfer": {
+    "probe_A_en_auc": 0.8946519230769232,
+    "probe_B_en_auc": 0.8833249999999999,
+    "probe_A_en_recall": 0.9015384615384615,
+    "probe_B_en_recall": 0.9276923076923077,
+    "probe_A_en_conFPR": 0.018,
+    "probe_B_en_conFPR": 0.03,
+    "auc_delta_B_minus_A": -0.01132692307692329,
+    "negative_transfer": true
+  }
+}

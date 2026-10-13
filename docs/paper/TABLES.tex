@@ -1,0 +1,234 @@
+% TABLES.tex — Results tables (updated with T4 follow-ups + T5 source-matched H2).
+% Requires: \usepackage{booktabs}, \usepackage{multirow}, \usepackage{caption}
+% Numbers from t2/t3/t4/t5 reports (run 2026-10-12).
+
+% ============================================================
+% Table 1: H1 — per held-out family AUROC
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{H1 (cross-family generalization): AUROC of each held-out family's override
+records vs pooled non-override negatives. Mean $=0.877$, bootstrap 95\% CI
+$[0.828,0.918]$; bar $\ge0.90$/lower$\ge0.85$ \emph{not met}.}
+\label{tab:h1}
+\begin{tabular}{llcc}
+\toprule
+Family & Mechanism & $n_{\text{ov}}$ & AUROC \\
+\midrule
+F3 & mode activation & 100 & 0.923 \\
+F4 & authority escalation & 100 & 0.922 \\
+F7 & CTF framing & 100 & 0.916 \\
+F9 & few-shot re-anchor & 100 & 0.919 \\
+F10 & delimiter attack & 100 & 0.931 \\
+F6 & multilingual & 50 & 0.857 \\
+F8 & context-embedding (indirect) & 50 & 0.803 \\
+F5 & encoding / obfuscation & 50 & 0.748 \\
+\midrule
+\multicolumn{3}{l}{\textbf{Mean per-family AUROC}} & \textbf{0.877} \\
+\multicolumn{3}{l}{Bootstrap 95\% CI} & $[0.828,\ 0.918]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 2: H2 — TOST equivalence (as-run, confounded)
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{H2 (discriminant), as-run on the frozen data. Both contrasts far outside
+$\pm0.10$; pooled AUROC $0.895<0.90$ (criterion (a) also fails). \emph{Note:}
+cell$\equiv$source, so this contrast is confounded (see Table~\ref{tab:decomp}
+and Table~\ref{tab:h2matched}).}
+\label{tab:h2}
+\begin{tabular}{llccc}
+\toprule
+Contrast & Interpretation & Mean diff & 90\% CI & Equiv? \\
+\midrule
+C3$-$C1 & both override, differ in harm & $+0.420$ & $[+0.379,+0.459]$ & No \\
+C2$-$C4 & both non-override, differ in harm & $+0.363$ & $[+0.331,+0.396]$ & No \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 3: H3 — curated + PIDS external
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{H3 (benign-constraint FPR) and external validation on PIDS-Bench
+\texttt{overdefense\_test} (339 hard-benign, held-out SP6--SP10). Curated FPR
+$0.018$ at recall $0.902$ (pass); PIDS mean $0.018$, worst $0.068$ (supported).}
+\label{tab:h3}
+\begin{tabular}{llcc}
+\toprule
+Source & Set & $n$ & FPR @ $\tau$ \\
+\midrule
+Curated & CONSTRAINT (held-out types) & 500 & 0.018 \\
+\midrule
+PIDS & SP6 & 339 & 0.0088 \\
+     & SP7 & 339 & 0.0678 \\
+     & SP8 & 339 & 0.0029 \\
+     & SP9 & 339 & 0.0029 \\
+     & SP10 & 339 & 0.0059 \\
+\midrule
+\multicolumn{2}{l}{PIDS mean / worst-case} & --- & 0.018 / 0.068 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 4: TF-IDF baseline vs delta (prereg §11)
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{Baseline comparison (override vs non-override, EN test). A TF-IDF
+(1--2 gram) classifier on raw user text \emph{outperforms} the activation-delta
+probe. Pre-registered rule (\S9): $|\text{gap}|<0.05 \Rightarrow$ the delta adds
+no substantial value over surface text. Gap $=-0.034$; \textbf{delta adds no value}.}
+\label{tab:baseline}
+\begin{tabular}{lcc}
+\toprule
+Model & Test AUROC & $\Delta$ vs delta \\
+\midrule
+TF-IDF (1--2 gram) + LogReg (raw text) & \textbf{0.9288} & $+0.034$ \\
+Activation-delta probe (layers \{3,6,12\}) & 0.8947 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 5: 2x2 decomposition (source-confound evidence)
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{2$\times$2 factorial decomposition of probe-score cell means. The harm
+main effect is $\approx0$ while the interaction dominates --- the H2 ``fail'' is a
+\textbf{source/style interaction}, not harm-tracking. Override raises the score by
+$+0.69$ on benign content but $-0.10$ on harmful content.}
+\label{tab:decomp}
+\begin{tabular}{lc}
+\toprule
+Effect & Value \\
+\midrule
+Main effect of Override (O) & $+0.294$ \\
+Main effect of Harm (H) & $-0.031$ \\
+Interaction (O$\times$H) & $-0.786$ \\
+\midrule
+Override effect on benign (C3$-$C4) & $+0.687$ \\
+Override effect on harmful (C1$-$C2) & $-0.099$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 6: per-cell detail + confusion matrix
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{Per-cell probe scores on the EN test ($\tau=0.258$). Harmful non-override
+(C2) is flagged at 0.987 --- signature of a source/style detector, not an override
+detector. Confusion matrix (O=1 vs O=0): $[[594,206],[64,586]]$.}
+\label{tab:percell}
+\begin{tabular}{lcccc}
+\toprule
+Cell & $n$ & mean & recall@$\tau$ & FPR@$\tau$ \\
+\midrule
+C1 override+harm & 400 & 0.518 & 0.840 & --- \\
+C2 no-ov+harm & 150 & 0.617 & --- & 0.987 \\
+C3 override+benign & 250 & 0.941 & 1.000 & --- \\
+C4 no-ov+benign & 150 & 0.254 & --- & 0.327 \\
+CONSTRAINT benign-impv & 500 & 0.044 & --- & 0.018 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 7: E2 layer-wise decodability
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{E2: pooled test AUROC by single layer (probe refit per layer). Deeper
+layers (12--20) decode better than shallow, consistent with late-layer decision
+loci [7], but \textbf{no layer reaches the TF-IDF baseline (0.929)}; best is
+L20 $=0.915$. Encoding (F5) is irreducibly weak at every depth.}
+\label{tab:e2}
+\begin{tabular}{lccccccccc}
+\toprule
+Layer & 1 & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 31 \\
+\midrule
+Pooled AUROC & .880 & .889 & .876 & .907 & .906 & \textbf{.915} & .893 & .899 & .908 \\
+F5 (encoding) & .771 & .790 & .716 & .751 & .761 & .783 & .723 & .728 & .790 \\
+F8 (indirect) & .773 & .776 & .802 & .858 & .829 & .853 & .808 & .801 & .817 \\
+F6 (multiling.) & .825 & .825 & .837 & .893 & .887 & .889 & .855 & .870 & .886 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 8: bilingual + negative transfer
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{Exploratory bilingual arm. (a) RU-test: EN+RU training raises override
+recall $0.60\!\to\!0.85$. (b) EN-test negative transfer: probe\_B costs only
+$-0.011$ AUROC vs probe\_A while raising recall. No severe negative transfer.}
+\label{tab:bilingual}
+\begin{tabular}{lccc}
+\toprule
+Probe / eval set & AUROC & Override recall & Constraint FPR \\
+\midrule
+\multicolumn{4}{l}{\emph{(a) RU-test}} \\
+probe\_A (EN-only) & 0.828 & 0.600 & 0.012 \\
+probe\_B (EN+RU) & 0.866 & 0.854 & 0.002 \\
+\midrule
+\multicolumn{4}{l}{\emph{(b) EN-test (negative transfer)}} \\
+probe\_A (EN-only) & 0.895 & 0.902 & 0.018 \\
+probe\_B (EN+RU) & 0.883 & 0.928 & 0.030 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+% Table 9: T5 source-matched H2  (FILL after t5 completes)
+% ============================================================
+\begin{table}[t]
+\centering
+\caption{T5b source- and length-matched H2, run across all 5 held-out system
+prompts (same idiom, matched length $\pm$4, only harm varied; 120 pairs/SP).
+Override-vs-direct AUROC is at chance for \emph{every} SP (0.461--0.487, spread
+0.026; pooled 0.480): the probe is \textbf{blind to the override wrapper} when
+content is held constant, and this is not SP-specific. The harm effect collapses
+from $+0.42$ (confounded) to $\approx+0.13$ and is consistent across SPs ---
+confirming the original H2 fail was a source artifact.}
+\label{tab:h2matched}
+\begin{tabular}{lccc}
+\toprule
+System prompt & Ov-vs-dir AUROC & Harm diff (ov) & Harm diff (dir) \\
+\midrule
+SP6  & 0.468 & $+0.123$ & $+0.107$ \\
+SP7  & 0.471 & $+0.117$ & $+0.100$ \\
+SP8  & 0.487 & $+0.150$ & $+0.141$ \\
+SP9  & 0.474 & $+0.157$ & $+0.140$ \\
+SP10 & 0.461 & $+0.129$ & $+0.117$ \\
+\midrule
+\textbf{Pooled} & \textbf{0.480} & $+0.135$ & $+0.121$ \\
+Spread across SPs & 0.026 & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Matched harm-effect equivalence (pooled, 600 pairs). Small but
+non-zero; opposite in sign to the confounded original (where harmful scored
+\emph{higher}). With source controlled, harm barely moves the score.}
+\label{tab:h2matchedci}
+\begin{tabular}{lccc}
+\toprule
+Contrast (matched, pooled) & Mean diff & 90\% CI & Equiv to 0? \\
+\midrule
+Override: benign $-$ harm & $+0.135$ & $[+0.114,++0.155]$ & No (small) \\
+Direct: benign $-$ harm & $+0.121$ & $[+0.101,+0.141]$ & No (small) \\
+\bottomrule
+\end{tabular}
+\end{table}

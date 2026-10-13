@@ -1,0 +1,62 @@
+{
+  "version": "T0-final",
+  "timestamp_utc": "2026-10-09T19:42:04.606017Z",
+  "prereg_draft": "6ac910dee14a8f5f57482614",
+  "dataset_file": "labeled_2x2.jsonl",
+  "dataset_sha256": "1efee76b5c1f4d6d8d254cb33b856f6dae61ae46fa91efa64662bf763787ca05",
+  "taxonomy_sha256": "97aa52f650302e9afe2910d141dd9f75d1fcf453b7a3c74f9db4a1c1fc41f849",
+  "n_records": 2850,
+  "split_counts": {
+    "train": 861,
+    "val": 539,
+    "test": 1450
+  },
+  "cell_counts": {
+    "C1": 700,
+    "C2": 300,
+    "C3": 550,
+    "C4": 300,
+    "CONSTRAINT": 1000
+  },
+  "override_total": 1250,
+  "nonoverride_total": 1600,
+  "test_families": [
+    "F10",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9"
+  ],
+  "test_constraint_types": [
+    "T10",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18",
+    "T19",
+    "T20",
+    "T9"
+  ],
+  "nonexclusion_test_types": [
+    "T10",
+    "T16",
+    "T9"
+  ],
+  "validator_violations": [],
+  "target_checks": {
+    "override_total>=600": true,
+    "nonoverride_C2C4>=600": true,
+    "H3_heldout_constraints>=500": true,
+    "val_override>=200": true,
+    "k_test_families>=8": true,
+    "k_types_test>=8": true,
+    "nonexclusion_test>=2": true,
+    "no_validator_violations": true
+  },
+  "READY_FOR_T1": true
+}

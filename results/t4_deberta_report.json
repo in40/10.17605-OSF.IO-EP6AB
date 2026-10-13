@@ -1,0 +1,44 @@
+{
+  "stage": "T4_deberta_baseline",
+  "model": "protectai/deberta-v3-base-prompt-injection-v2",
+  "zero_shot": true,
+  "n_test": 1450,
+  "auroc_vs_override": 0.8883153846153847,
+  "per_cell": {
+    "C1": {
+      "n": 400,
+      "mean_p_injection": 0.539061427116394,
+      "recall_at_0.5": 0.5375
+    },
+    "C2": {
+      "n": 150,
+      "mean_p_injection": 5.3142564865993336e-05,
+      "fpr_at_0.5": 0.0
+    },
+    "C3": {
+      "n": 250,
+      "mean_p_injection": 0.6575783491134644,
+      "recall_at_0.5": 0.652
+    },
+    "C4": {
+      "n": 150,
+      "mean_p_injection": 1.973401822397136e-06,
+      "fpr_at_0.5": 0.0
+    },
+    "CONSTRAINT": {
+      "n": 500,
+      "mean_p_injection": 0.0001241697755176574,
+      "fpr_at_0.5": 0.0
+    }
+  },
+  "comparison": {
+    "delta_auc": 0.8947,
+    "tfidf_auc": 0.9288,
+    "deberta_auc": 0.8883153846153847
+  },
+  "caveats": [
+    "DeBERTa is a zero-shot pretrained detector, NOT trained on our split.",
+    "Its 'injection' concept may differ from our 'override' construct (O).",
+    "Threshold 0.5 is DeBERTa's native operating point, not our tau."
+  ]
+}

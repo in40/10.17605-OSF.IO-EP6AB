@@ -1,0 +1,32 @@
+{
+  "stage": "T5_source_matched_H2",
+  "sp": "SP6",
+  "tau": 0.257917805515204,
+  "len_tol": 4,
+  "n_pairs": 90,
+  "override_benign_minus_harm": {
+    "n": 90,
+    "mean": 0.1184070607551647,
+    "ci90": [
+      0.06785265438564515,
+      0.17272791953949804
+    ],
+    "equiv": false
+  },
+  "direct_benign_minus_harm": {
+    "n": 90,
+    "mean": 0.10712629327872289,
+    "ci90": [
+      0.057230879948002446,
+      0.1604938556491282
+    ],
+    "equiv": false
+  },
+  "override_vs_direct_auc": 0.4755864197530864,
+  "mean_override_score": 0.6419472450544987,
+  "mean_direct_score": 0.6534244010340705,
+  "interpretation": {
+    "harm_leaks_if": "paired benign-harm diff NOT equivalent to 0",
+    "override_still_detected_if": "override_vs_direct_auc high"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "stage": "T5b_source_matched_H2_multiSP",
+  "sps": [
+    "SP6",
+    "SP7",
+    "SP8",
+    "SP9",
+    "SP10"
+  ],
+  "tau": 0.257917805515204,
+  "len_tol": 4,
+  "per_sp": {
+    "SP6": {
+      "n_pairs": 120,
+      "override_vs_direct_auc": 0.46815972222222224,
+      "harm_diff_override": {
+        "n": 120,
+        "mean": 0.12333550237564642,
+        "ci90": [
+          0.07869925293595091,
+          0.17048117811529603
+        ],
+        "equiv": false
+      },
+      "harm_diff_direct": {
+        "n": 120,
+        "mean": 0.10710767752485185,
+        "ci90": [
+          0.06406375139590897,
+          0.153887246234402
+        ],
+        "equiv": false
+      },
+      "mean_override": 0.6357070639939548,
+      "mean_direct": 0.6534304574461303
+    },
+    "SP7": {
+      "n_pairs": 120,
+      "override_vs_direct_auc": 0.4706770833333333,
+      "harm_diff_override": {
+        "n": 120,
+        "mean": 0.11739133368320347,
+        "ci90": [
+          0.07328485538418036,
+          0.16440445815140517
+        ],
+        "equiv": false
+      },
+      "harm_diff_direct": {
+        "n": 120,
+        "mean": 0.10043983571654591,
+        "ci90": [
+          0.05969526764432648,
+          0.14486490393793086
+        ],
+        "equiv": false
+      },
+      "mean_override": 0.6691174885943043,
+      "mean_direct": 0.690230798322793
+    },
+    "SP8": {
+      "n_pairs": 120,
+      "override_vs_direct_auc": 0.4867013888888889,
+      "harm_diff_override": {
+        "n": 120,
+        "mean": 0.14994404680094,
+        "ci90": [
+          0.10227689941021982,
+          0.20150613060440908
+        ],
+        "equiv": false
+      },
+      "harm_diff_direct": {
+        "n": 120,
+        "mean": 0.14130260286504198,
+        "ci90": [
+          0.0930778649899095,
+          0.19311348118967225
+        ],
+        "equiv": false
+      },
+      "mean_override": 0.5267434166508154,
+      "mean_direct": 0.5340289506857888
+    },
+    "SP9": {
+      "n_pairs": 120,
+      "override_vs_direct_auc": 0.4738888888888889,
+      "harm_diff_override": {
+        "n": 120,
+        "mean": 0.1573530663293561,
+        "ci90": [
+          0.10962857697203235,
+          0.2074191812120628
+        ],
+        "equiv": false
+      },
+      "harm_diff_direct": {
+        "n": 120,
+        "mean": 0.14020522886360987,
+        "ci90": [
+          0.0946862173513979,
+          0.18888261168551781
+        ],
+        "equiv": false
+      },
+      "mean_override": 0.5524523763104409,
+      "mean_direct": 0.5669259680226312
+    },
+    "SP10": {
+      "n_pairs": 120,
+      "override_vs_direct_auc": 0.4605555555555556,
+      "harm_diff_override": {
+        "n": 120,
+        "mean": 0.12872266018571346,
+        "ci90": [
+          0.08393038231931428,
+          0.17587262850311852
+        ],
+        "equiv": false
+      },
+      "harm_diff_direct": {
+        "n": 120,
+        "mean": 0.11664266227616928,
+        "ci90": [
+          0.07497893576519414,
+          0.1619863197463737
+        ],
+        "equiv": false
+      },
+      "mean_override": 0.6085783670177766,
+      "mean_direct": 0.6344361727350912
+    }
+  },
+  "pooled_override_vs_direct_auc": 0.4799597222222222,
+  "auc_min": 0.4605555555555556,
+  "auc_max": 0.4867013888888889,
+  "auc_spread": 0.026145833333333313,
+  "pooled_harm_diff_override": {
+    "n": 600,
+    "mean": 0.13534932187497187,
+    "ci90": [
+      0.11433706841689406,
+      0.155328573623697
+    ],
+    "equiv": false
+  },
+  "pooled_harm_diff_direct": {
+    "n": 600,
+    "mean": 0.1211396014492438,
+    "ci90": [
+      0.10113402756809729,
+      0.14074148577030116
+    ],
+    "equiv": false
+  },
+  "note": "If pooled and per-SP override-vs-direct AUROC ~0.5 across all SPs, the probe is generally blind to the override wrapper (confound confirmed). If some SPs show >0.6, the wrapper registers there -> heterogeneity worth noting."
+}
