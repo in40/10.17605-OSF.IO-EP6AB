@@ -17,6 +17,7 @@ src/build_manuscript.py
 
 # Cover letter (journal submission) — not part of the public reproduction repo.
 COVER_LETTER.md
+COVER_LETTER_RU.md
 
 # Editor / OS junk
 *.swp
