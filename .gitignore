@@ -12,6 +12,8 @@ legacy/
 # Manuscript (submission-formatted) — NOT published in the code repo;
 # distributed via the journal / preprint server only.
 manuscript/
+# Manuscript builder (contains the full manuscript prose) — local-only, not part of reproduction.
+src/build_manuscript.py
 
 # Editor / OS junk
 *.swp

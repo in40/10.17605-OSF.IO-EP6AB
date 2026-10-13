@@ -49,7 +49,7 @@ symfw-prereg-ep6ab/
     └── SESSION_SUMMARY.md
 ```
 
-> The submission-formatted manuscript (`manuscript_EP6AB.docx`) is intentionally **not** in this repo — it is distributed via the journal / preprint server to respect publication conditions. `build_manuscript.py` can regenerate it locally.
+> The submission-formatted manuscript (`manuscript_EP6AB.docx`) is intentionally **not** in this repo — it is distributed via the journal / preprint server to respect publication conditions. The manuscript builder is kept locally and is not part of the reproduction pipeline.
 
 > Note: the working tree also contains early scaffolding and utility scripts (mock detectors, OSF helpers, dataset checks) that are **not** part of the reproduction path; the files under `src/` above are the canonical pipeline.
 
@@ -96,9 +96,8 @@ python src/t5b_source_matched_h2_multi.py --probe results/probe_qwen35-4b-t1.pkl
 # Scale — 4B -> 9B
 python src/scaling_9b.py --model /path/to/Qwen3.5-9B --report results/scaling_9b_report.json
 
-# Figures + manuscript
-python make_figures_ru.py && make_method_figure_ru.py
-python build_manuscript.py
+# Figures (regenerate from data/results)
+python src/make_figures_ru.py && python src/make_method_figure_ru.py
 ```
 
 **Integrity guarantees enforced in code:**
