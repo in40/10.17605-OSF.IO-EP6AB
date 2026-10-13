@@ -3,7 +3,7 @@
 **Pre-registration:** OSF `ep6ab` · DOI [10.17605/OSF.IO/EP6AB](https://doi.org/10.17605/OSF.IO/EP6AB) · CC0
 **Headline (negative) result:** a plain TF-IDF baseline on raw text outperforms the activation-delta probe, and a source-matched test shows the probe is blind to the override wrapper (AUROC ≈ 0.48, at chance) — the apparent "override" signal is a content/source artifact, robust to model scale (4B→9B).
 
-This repository contains the frozen data, the full analysis pipeline, figures, and the manuscript for the study.
+This repository contains the frozen data, the full analysis pipeline, figures, and reports for the study. (The submission-formatted manuscript is distributed separately — see the note below.)
 
 ---
 
@@ -42,14 +42,14 @@ symfw-prereg-ep6ab/
 │   ├── fig_roc.png / fig_roc_ru.png
 │   └── fig_e2.png / fig_e2_ru.png
 ├── results/                   # JSON reports (t2/t3/t4/t5/scaling)
-├── docs/
-│   ├── PREREG_OSF_FULL.md     # full pre-registration text
-│   ├── RESULTS.md             # results write-up
-│   ├── PRIOR_WORK_POSITIONING.md
-│   └── SESSION_SUMMARY.md
-└── manuscript/
-    └── manuscript_EP6AB.docx  # bilingual (RU+EN) journal manuscript
+└── docs/
+    ├── PREREG_OSF_FULL.md     # full pre-registration text
+    ├── RESULTS.md             # results write-up
+    ├── PRIOR_WORK_POSITIONING.md
+    └── SESSION_SUMMARY.md
 ```
+
+> The submission-formatted manuscript (`manuscript_EP6AB.docx`) is intentionally **not** in this repo — it is distributed via the journal / preprint server to respect publication conditions. `build_manuscript.py` can regenerate it locally.
 
 > Note: the working tree also contains early scaffolding and utility scripts (mock detectors, OSF helpers, dataset checks) that are **not** part of the reproduction path; the files under `src/` above are the canonical pipeline.
 

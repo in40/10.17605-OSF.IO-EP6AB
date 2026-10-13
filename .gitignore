@@ -9,6 +9,10 @@ env/
 # Scratch / legacy (not part of the reproduction bundle)
 legacy/
 
+# Manuscript (submission-formatted) — NOT published in the code repo;
+# distributed via the journal / preprint server only.
+manuscript/
+
 # Editor / OS junk
 *.swp
 *~
