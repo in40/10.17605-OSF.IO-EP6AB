@@ -383,17 +383,17 @@ def russian(doc):
 
     heading(doc, "Литература")
     refs = [
-        "Abdelnabi S., Fay B., Cherubin A., Salem A., Fritz M., Paverd A. Get my drift? Catching LLM task drift with activation deltas // IEEE SaTML. 2025. arXiv:2406.00799. DOI:10.1109/SaTML64287.2025.00011.",
-        "Liu Y., Cheng W., Zheng L., Su Z. Defending LLMs against jailbreak attacks through representation offset detection // Information Processing & Management. 2026. Vol. 63(5). 104662. DOI:10.1016/j.ipm.2026.104662.",
-        "Ye S., Cui H., Hadfield-Menell D. Prompt injection as role confusion // ICML. 2026. arXiv:2603.12277.",
-        "Guo W., Zhao J., Wang B. BERM: Low-overhead prompt-injection detection via in-situ benign representation modeling // IJCAI. 2026. P. 599–607. DOI:10.24963/ijcai.2026/68.",
-        "Wang Y., Wei A., Liu Z., Chen X. False sense of security: Why probing-based malicious input detection fails to generalize // NeurIPS 2025 MechInterp WS. arXiv:2509.03888.",
-        "David R. et al. Latent undertow: Representation dynamics under injection // ICML 2026 MechInterp. arXiv:2609.15994.",
-        "Wen J. et al. Where do LLMs decide? // arXiv:2609.37737.",
-        "Fay B. et al. Persistent homology of LLM representations // ICLR. 2026. arXiv:2505.20435.",
-        "Shire. PIDS-Bench: Evaluating prompt-injection detectors under over-defense, obfuscation, and distribution shift // arXiv:2609.15017.",
-        "Dong et al. I've decided to leak // EMNLP. 2025. 2025.emnlp-main.1082.",
-        "Russinovich. CounterSteer // arXiv:2609.36570.",
+        "Abdelnabi S., Fay A., Cherubin G., Salem A., Fritz M., Paverd A. Get my drift? Catching LLM task drift with activation deltas // IEEE SaTML. 2025. arXiv:2406.00799. DOI:10.1109/SaTML64287.2025.00011.",
+        "Liu S., Cheng X., Zheng Z., Su S. Defending LLMs against jailbreak attacks through representation offset detection // Information Processing & Management. 2026. Vol. 63(5). 104662. DOI:10.1016/j.ipm.2026.104662.",
+        "Ye C., Cui J., Hadfield-Menell D. Prompt Injection as Role Confusion // ICML. 2026. arXiv:2603.12277.",
+        "Guo M., Zhao C., Wang J. BERM: Low-Overhead Prompt-Injection Detection via In-Situ Benign Representation Modeling // IJCAI. 2026. P. 599–607. DOI:10.24963/ijcai.2026/68.",
+        "Wang C., Wei Z., Liu Q., Chen M. False Sense of Security: Why Probing-based Malicious Input Detection Fails to Generalize // NeurIPS 2025 MechInterp WS. arXiv:2509.03888.",
+        "David E., Fomin M., LeVi A. Latent Undertow: How Ordinary Typos Break Probes // ICML 2026 MechInterp. arXiv:2609.15994.",
+        "Wen R., Liu J., Yang Z. Where Do LLMs Decide to Break the Rules? Mechanistic Localization of Prompt Injection Compliance // arXiv:2609.37737.",
+        "Fay A., García-Redondo I., Wang Q. The Shape of Adversarial Influence: Characterizing LLM Latent Spaces with Persistent Homology // ICLR. 2026. arXiv:2505.20435.",
+        "Shire Y. K., Kim S.-C. PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift // arXiv:2609.15017.",
+        "Dong J., Zhang Y., Yan L., et al. \"I've Decided to Leak\": Probing Internals Behind Prompt Leakage Intents // EMNLP. 2025. 2025.emnlp-main.1082.",
+        "Russinovich M. CounterSteer: Suppressing Indirect Prompt Injection with Activation Steering // arXiv:2609.36570.",
         "Greshake K. et al. Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection // arXiv:2302.12173.",
     ]
     for i, r in enumerate(refs, 1):
@@ -694,17 +694,17 @@ def english(doc):
 
     heading(doc, "References")
     refs_en = [
-        "Abdelnabi S., Fay B., Cherubin A., Salem A., Fritz M., Paverd A. Get my drift? Catching LLM task drift with activation deltas // IEEE SaTML. 2025. arXiv:2406.00799. DOI:10.1109/SaTML64287.2025.00011.",
-        "Liu Y., Cheng W., Zheng L., Su Z. Defending LLMs against jailbreak attacks through representation offset detection // Information Processing & Management. 2026. Vol. 63(5). 104662. DOI:10.1016/j.ipm.2026.104662.",
-        "Ye S., Cui H., Hadfield-Menell D. Prompt injection as role confusion // ICML. 2026. arXiv:2603.12277.",
-        "Guo W., Zhao J., Wang B. BERM: Low-overhead prompt-injection detection via in-situ benign representation modeling // IJCAI. 2026. P. 599–607. DOI:10.24963/ijcai.2026/68.",
-        "Wang Y., Wei A., Liu Z., Chen X. False sense of security: Why probing-based malicious input detection fails to generalize // NeurIPS 2025 MechInterp WS. arXiv:2509.03888.",
-        "David R. et al. Latent undertow: Representation dynamics under injection // ICML 2026 MechInterp. arXiv:2609.15994.",
-        "Wen J. et al. Where do LLMs decide? // arXiv:2609.37737.",
-        "Fay B. et al. Persistent homology of LLM representations // ICLR. 2026. arXiv:2505.20435.",
-        "Shire. PIDS-Bench: Evaluating prompt-injection detectors under over-defense, obfuscation, and distribution shift // arXiv:2609.15017.",
-        "Dong et al. I've decided to leak // EMNLP. 2025. 2025.emnlp-main.1082.",
-        "Russinovich. CounterSteer // arXiv:2609.36570.",
+        "Abdelnabi S., Fay A., Cherubin G., Salem A., Fritz M., Paverd A. Get my drift? Catching LLM task drift with activation deltas // IEEE SaTML. 2025. arXiv:2406.00799. DOI:10.1109/SaTML64287.2025.00011.",
+        "Liu S., Cheng X., Zheng Z., Su S. Defending LLMs against jailbreak attacks through representation offset detection // Information Processing & Management. 2026. Vol. 63(5). 104662. DOI:10.1016/j.ipm.2026.104662.",
+        "Ye C., Cui J., Hadfield-Menell D. Prompt Injection as Role Confusion // ICML. 2026. arXiv:2603.12277.",
+        "Guo M., Zhao C., Wang J. BERM: Low-Overhead Prompt-Injection Detection via In-Situ Benign Representation Modeling // IJCAI. 2026. P. 599–607. DOI:10.24963/ijcai.2026/68.",
+        "Wang C., Wei Z., Liu Q., Chen M. False Sense of Security: Why Probing-based Malicious Input Detection Fails to Generalize // NeurIPS 2025 MechInterp WS. arXiv:2509.03888.",
+        "David E., Fomin M., LeVi A. Latent Undertow: How Ordinary Typos Break Probes // ICML 2026 MechInterp. arXiv:2609.15994.",
+        "Wen R., Liu J., Yang Z. Where Do LLMs Decide to Break the Rules? Mechanistic Localization of Prompt Injection Compliance // arXiv:2609.37737.",
+        "Fay A., García-Redondo I., Wang Q. The Shape of Adversarial Influence: Characterizing LLM Latent Spaces with Persistent Homology // ICLR. 2026. arXiv:2505.20435.",
+        "Shire Y. K., Kim S.-C. PIDS-Bench: Evaluating Prompt-Injection Detectors Under Over-Defense, Obfuscation, and Distribution Shift // arXiv:2609.15017.",
+        "Dong J., Zhang Y., Yan L., et al. \"I've Decided to Leak\": Probing Internals Behind Prompt Leakage Intents // EMNLP. 2025. 2025.emnlp-main.1082.",
+        "Russinovich M. CounterSteer: Suppressing Indirect Prompt Injection with Activation Steering // arXiv:2609.36570.",
         "Greshake K. et al. Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection // arXiv:2302.12173.",
     ]
     for i, r in enumerate(refs_en, 1):
