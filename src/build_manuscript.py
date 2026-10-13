@@ -348,6 +348,12 @@ def russian(doc):
              "Это полезное ограничение семейства методов: оно предостерегает от заявлений об «обнаружении "
              "переопределения» на основе дельты, которую превосходит простой текстовый базовый метод.")
 
+    heading(doc, "Доступность данных и кода")
+    para(doc, "Полный воспроизводимый пакет — замороженный датасет, скрипты пайплайна (T0–T5 и проверка масштаба), "
+             "рисунки, отчёты и рукопись — доступен в репозитории: "
+             "https://github.com/in40/10.17605-OSF.IO-EP6AB (CC0). Предрегистрация: OSF ep6ab, "
+             "DOI 10.17605/OSF.IO/EP6AB.")
+
     heading(doc, "Глоссарий")
     add_table(doc,
         ["Термин", "Определение"],
@@ -652,6 +658,12 @@ def english(doc):
              "over-defense resistance, is a property of the data distribution rather than the method. This is a useful "
              "boundary for the method family: it cautions against claiming override detection from a delta that a simple "
              "text baseline matches.")
+
+    heading(doc, "Code and Data Availability")
+    para(doc, "The complete reproducible package — frozen dataset, pipeline scripts (T0–T5 and the model-scale check), "
+             "figures, reports, and the manuscript — is available at "
+             "https://github.com/in40/10.17605-OSF.IO-EP6AB (CC0). Pre-registration: OSF ep6ab, "
+             "DOI 10.17605/OSF.IO/EP6AB.")
 
     heading(doc, "Glossary")
     add_table(doc,
