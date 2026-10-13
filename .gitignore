@@ -15,6 +15,9 @@ manuscript/
 # Manuscript builder (contains the full manuscript prose) — local-only, not part of reproduction.
 src/build_manuscript.py
 
+# Cover letter (journal submission) — not part of the public reproduction repo.
+COVER_LETTER.md
+
 # Editor / OS junk
 *.swp
 *~
