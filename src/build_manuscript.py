@@ -350,9 +350,10 @@ def russian(doc):
 
     heading(doc, "Доступность данных и кода")
     para(doc, "Полный воспроизводимый пакет — замороженный датасет, скрипты пайплайна (T0–T5 и проверка масштаба), "
-             "рисунки, отчёты и рукопись — доступен в репозитории: "
+             "рисунки и отчёты — доступен в репозитории: "
              "https://github.com/in40/10.17605-OSF.IO-EP6AB (CC0). Предрегистрация: OSF ep6ab, "
-             "DOI 10.17605/OSF.IO/EP6AB.")
+             "DOI 10.17605/OSF.IO/EP6AB. Рукопись, оформленная для подачи, распространяется отдельно — через журнал "
+             "или preprint-сервер.")
 
     heading(doc, "Глоссарий")
     add_table(doc,
@@ -661,9 +662,9 @@ def english(doc):
 
     heading(doc, "Code and Data Availability")
     para(doc, "The complete reproducible package — frozen dataset, pipeline scripts (T0–T5 and the model-scale check), "
-             "figures, reports, and the manuscript — is available at "
-             "https://github.com/in40/10.17605-OSF.IO-EP6AB (CC0). Pre-registration: OSF ep6ab, "
-             "DOI 10.17605/OSF.IO/EP6AB.")
+             "figures, and reports — is available at https://github.com/in40/10.17605-OSF.IO-EP6AB (CC0). "
+             "Pre-registration: OSF ep6ab, DOI 10.17605/OSF.IO/EP6AB. The submission-formatted manuscript is "
+             "distributed separately via the journal or a preprint server.")
 
     heading(doc, "Glossary")
     add_table(doc,
